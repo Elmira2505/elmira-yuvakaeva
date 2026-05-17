@@ -1,44 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elmira Yuvakaeva's Portfolio</title>
-</head>
 
-<body>
-    <h1>Elmira Yuvakaeva</h1>
-    <section id="about">
-        <h2>About</h2>
-        <p> I am FullStack Developer with 4+ experiences in this fields.</p>
-    </section>
-    <section id=" experience">
-        <h2>Experience</h2>
-        <ul>
-            <li>JavaScript, </li>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="header_nav">
+        <a href="#about" class="nav_elem active">About</a>
+        <a href="#experience" class="nav_elem">Experience</a>
+        <a href="#skills" class="nav_elem">Skills</a>
+        <a href="#projects" class="nav_elem">Projects</a>
+        <a href="#connect" class="nav_elem">Connect</a>
+        <a href="#contact" class="nav_elem">Contact</a>
+      </nav>
+      <header class="header">
+        <img src="./assets/1662854161587.jpeg" alt=" photo" />
+        <h1>Elmira Yuvakaeva <br />FullStack Developer</h1>
+      </header>
+
+      <main class="main">
+        <section id="about">
+          <h2>About</h2>
+          <p class="wraper">
+            I am FullStack Developer, 4+ industry experience building websites
+            and web applications on React with extensive experience in other
+            front-end and back-end technologies.
+          </p>
+        </section>
+        <section id="skills">
+          <h2>Skills</h2>
+          <ul class="wraper">
+            <li>JavaScript</li>
             <li>CSS</li>
             <li>HTML</li>
             <li>React</li>
             <li>MongoDB</li>
-        </ul>
-    </section>
-    <section id="connect">
-        <h2>Connect</h2>
-        <ul>
-            <li> <a href="https://github.com/Elmira2505">GitHub</a></li>
-            <li> <a href="https://www.linkedin.com/in/elmira-yuvakaeva-a2aa19127">Linkedin</a></li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <ul>
-            <li> Phone: XXX-XXX-62-62</li>
-            <li> E-mail: e4016262@gmail.com</li>
-        </ul>
-    </section>
+          </ul>
+        </section>
+        <section id="experience">
+          <h2>Experience</h2>
+          <div class="experience">
+            <div class="experience_elem wraper">
+              JavaScript - Worked with interactive web applications.
+            </div>
+            <div class="experience_elem wraper">
+              CSS - Created responsive and modern layouts.
+            </div>
+            <div class="experience_elem wraper">
+              HTML - Built semantic and accessible web pages.
+            </div>
+            <div class="experience_elem wraper">
+              React - Developed reusable UI components.
+            </div>
+            <div class="experience_elem wraper">
+              MongoDB - Worked with NoSQL databases.
+            </div>
+          </div>
+        </section>
+        <section id="projects">
+          <h2>Projects</h2>
+        </section>
+        <section id="connect">
+          <h2>Connect</h2>
 
-
-</body>
-
+          <div class="wraper">
+            <div class="connect_item">
+              <a href="https://github.com/Elmira2505">
+                <img
+                  src="./assets/github-color.svg"
+                  alt="Github"
+                  class="icon"
+                />
+                Github
+              </a>
+            </div>
+            <div class="connect_item">
+              <a href="https://www.linkedin.com/in/elmira-yuvakaeva-a2aa19127">
+                <img
+                  src="./assets/linkedin-svg.svg"
+                  alt="LinkedIn"
+                  class="icon"
+                />
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </section>
+        <section id="contact">
+          <h2>Contact</h2>
+          <ul class="wraper">
+            <li>Phone: XXX-XXX-62-62</li>
+            <li>E-mail: e4016262@gmail.com</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
