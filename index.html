@@ -10,17 +10,22 @@
 
   <body>
     <div class="container">
-      <nav class="header_nav">
+    
+      <header class="header ">  
+        <nav class="header_nav">
         <a href="#about" class="nav_elem active">About</a>
+          <a href="#skills" class="nav_elem">Skills</a>
         <a href="#experience" class="nav_elem">Experience</a>
-        <a href="#skills" class="nav_elem">Skills</a>
+    
         <a href="#projects" class="nav_elem">Projects</a>
         <a href="#connect" class="nav_elem">Connect</a>
         <a href="#contact" class="nav_elem">Contact</a>
-      </nav>
-      <header class="header">
+        </nav>
+        <div class="header_content">
         <img src="./assets/1662854161587.jpeg" alt=" photo" />
         <h1>Elmira Yuvakaeva <br />FullStack Developer</h1>
+        </div>
+  
       </header>
 
       <main class="main">
@@ -34,17 +39,15 @@
         </section>
         <section id="skills">
           <h2>Skills</h2>
-          <ul class="wraper">
-            <li>JavaScript</li>
-            <li>CSS</li>
-            <li>HTML</li>
-            <li>React</li>
-            <li>MongoDB</li>
+          <ul class="flex-row">
+           
           </ul>
         </section>
         <section id="experience">
           <h2>Experience</h2>
-          <div class="experience">
+          <div class="experience flex-column">
+
+            
             <div class="experience_elem wraper">
               JavaScript - Worked with interactive web applications.
             </div>
@@ -64,6 +67,7 @@
         </section>
         <section id="projects">
           <h2>Projects</h2>
+           <ul></ul>
         </section>
         <section id="connect">
           <h2>Connect</h2>
@@ -100,5 +104,6 @@
         </section>
       </main>
     </div>
+    <script src="./js/index.js"></script>
   </body>
 </html>

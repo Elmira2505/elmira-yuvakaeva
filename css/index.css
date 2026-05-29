@@ -1,5 +1,6 @@
 * {
   font-family: "Times New Roman", Times, serif;
+
 }
 body {
   background-color: rgb(213, 209, 209);
@@ -12,27 +13,42 @@ body {
   margin: 0 auto;
 }
 .header {
+  position: sticky;
+  top:  0;
   margin: 0 auto;
-}
-.header {
-
   padding: 15px;
-  background-color: rgb(246, 246, 135);
+  background-color: rgb(247, 247, 194);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   border-radius: 12px;
-  gap: 50px;
+  margin-bottom: 20px;
+    padding: 5px;
+    /* background-color: rgb(243 243 186);; */
+    backdrop-filter: blur(8px);
+    margin-bottom: 20px;
+    z-index: 1000;
+ 
 }
-nav {
+
+/*nav {
 
   padding: 5px;
-  background-color: rgb(213, 209, 209);
+ // background-color: rgb(243 243 186);; 
   border: none;
   margin-bottom: 100px;
 }
-nav.header_nav {
-    position: sticky;
-        top: 0;
+*/
+ .flex-column {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .flex-row {
+   display: flex;
+   flex-direction: row;
+ }
+nav  {
+
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -42,21 +58,27 @@ nav.header_nav {
   padding: 0 20px;
   margin-bottom: 20px;
 }
-section {
-    scroll-margin-top: 50px;
-}
+ .header_content {
+
+   display: flex;
+   flex-direction: row;
+    gap: 40px;
+
+  padding-left: 100px;
+  margin-bottom: 2rem;
+ }
+
 
 * .nav_elem {
   padding: 0.8rem;
   color: darkblue;
+  font-weight: 800;
   border-radius: 10%;
 }
 .header_nav a:hover {
   background-color: white;
 }
-.main{
-  padding-bottom: 2000px;
-}
+
 h1 {
   font-weight: 800;
   font-size: 32px;
@@ -75,14 +97,41 @@ img {
 }
 h2 {
   margin-top: 15px;
+  font-size: 1.5rem;
 }
 
 .main {
   align-content: center;
 }
+section {
+      transition: all 0.3s ease;
+        border: 1px solid #6507e1;
+        border-radius: 12px;
+        margin: 30px 0;
+        padding: 15px;
+            scroll-margin-top: 300px;
+            font-size: 1.1rem;
+}
 
+section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+#skills ul {
+  list-style: none;
+  justify-content: left;
+  gap: 0.8rem;
+  padding-left: 0;
+  
+
+}
+#skills li {
+  display: block;
+  padding: 0.5rem;
+  gap: 1rem
+}
 li {
-  padding: 0.3rem;
+    padding: 0.3rem;
 }
 .connect {
     display: flex;
@@ -106,14 +155,22 @@ li {
   font-size: 1.2rem;
 }
 
-.experiense {
-  display: flex;
-  flex-direction: column;
-}
 
 .experience_elem {
   min-width: 180px;
 
   transition: transform 0.3s ease;
   margin-bottom: 0.5rem;
+}
+
+#footer {
+  position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    color: darkblue;
+    margin-bottom: 500px;
 }
