@@ -45,10 +45,11 @@ function createButton(nameBtn, classBtn){
 const form =  document.querySelector('form[name="leave_message"]')
 form.addEventListener('submit',(event)=>{
     event.preventDefault()
-    const name= event.target.name.value
-    const email= event.target.email.value
+    const name= event.target.usersName.value
+    const email= event.target.usersEmail.value
     const message = event.target.usersMessage.value
     messageSection.style.display = "block"
+    console.log(name, email, message)
     messageElement(name, email, message)
   
 
