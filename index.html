@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>Elmira Yuvakaeva's Portfolio</title>
+   
 
     <link rel="stylesheet" href="./css/index.css" />
   </head>
@@ -20,6 +22,7 @@
         <a href="#projects" class="nav_elem">Projects</a>
         <a href="#connect" class="nav_elem">Connect</a>
         <a href="#contact" class="nav_elem">Contact</a>
+        <a href="#leaveMessage" class="nav_elem">Leave a message</a>
         </nav>
         <div class="header_content">
         <img src="./assets/1662854161587.jpeg" alt=" photo" />
@@ -102,7 +105,24 @@
             <li>E-mail: e4016262@gmail.com</li>
           </ul>
         </section>
+        <section id="leaveMessage">
+          <h2>Leave a Message</h2>
+          <form id=""leave_message" name="leave_message" >
+            <label for="name">Users name:  </label>
+            <input type="text" id="name" name="name" value="Users name" required> <br>
+            <label for="email">Users Email: </label>
+            <input type="email" id="email" name="email" value="Users Email" required> <br>
+            <label for="usersMessage">Users Message: </label> <br>
+            <textarea name="usersMessage" id="usersMessage" required rows="4" cols="100">Leave a Message</textarea> <br>
+            <button type="submit" class="submit">Submit</button>
+          </form>
+        </section>
+          <section id="messages">
+                  <h2>Messages</h2>
+            <ul></ul>
+          </section>
       </main>
+
     </div>
     <script src="./js/index.js"></script>
   </body>
