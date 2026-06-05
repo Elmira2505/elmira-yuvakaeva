@@ -21,3 +21,89 @@ for (let i = 0; i < skills.length; i++){
     skillElem.className = "wraper"
     skillList.appendChild(skillElem)
 }
+
+const messageSection = document.getElementById("messages")
+messageSection.style.display = "none"
+const messageList = messageSection.querySelector("ul")
+const newMessage = document.createElement("li")
+
+
+
+function createButton(nameBtn, classBtn){
+  const button = document.createElement("button");
+  button.type = "button";
+  button.innerText = nameBtn;
+  button.className = classBtn
+  return button
+}
+
+
+
+
+
+
+const form =  document.querySelector('form[name="leave_message"]')
+form.addEventListener('submit',(event)=>{
+    event.preventDefault()
+    const name= event.target.usersName.value
+    const email= event.target.usersEmail.value
+    const message = event.target.usersMessage.value
+    messageSection.style.display = "block"
+    console.log(name, email, message)
+    messageElement(name, email, message)
+  
+
+})
+function toggleSectionMes() {
+  if (messageList.children.length === 0) {
+    messageSection.style.display = "none";
+  } else {
+    messageSection.style.display = "block";
+  }
+}
+
+
+
+function messageElement(name, email, message){
+ 
+  const newMessage = document.createElement("li")
+newMessage.innerHTML= ` 
+<a href ="mailto: ${email}">${name}</a> <br>
+<span> ${message.trim()}</span>`
+const removeBtn = createButton("remove", "submit messageBtn" );
+const editBtn = createButton("edit", "submit messageBtn" );
+
+const btnContainer = document.createElement("div");
+btnContainer.className = "messagesBtnGroup";
+
+btnContainer.appendChild(editBtn);
+btnContainer.appendChild(removeBtn);
+
+newMessage.appendChild(btnContainer);
+messageList.appendChild(newMessage)
+
+removeBtn.addEventListener("click", (event) => {
+  const messageEl = event.target.parentNode.parentNode;
+  console.log(messageEl)
+  messageEl.remove();
+ toggleSectionMes() 
+
+});
+
+  editBtn.addEventListener("click", () => {
+
+    const span = newMessage.querySelector("span");
+
+    const updatedText = prompt(
+      "Edit message",
+      span.innerText
+    );
+
+    if (updatedText) {
+      span.innerText = updatedText;
+    }
+
+  });
+
+
+} 
