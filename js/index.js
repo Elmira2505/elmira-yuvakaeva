@@ -49,9 +49,8 @@ form.addEventListener('submit',(event)=>{
     const email= event.target.usersEmail.value
     const message = event.target.usersMessage.value
     messageSection.style.display = "block"
-    console.log(name, email, message)
     messageElement(name, email, message)
-  
+   event.target.reset()
 
 })
 function toggleSectionMes() {
@@ -82,6 +81,7 @@ btnContainer.appendChild(removeBtn);
 newMessage.appendChild(btnContainer);
 messageList.appendChild(newMessage)
 
+
 removeBtn.addEventListener("click", (event) => {
   const messageEl = event.target.parentNode.parentNode;
   console.log(messageEl)
@@ -107,3 +107,30 @@ removeBtn.addEventListener("click", (event) => {
 
 
 } 
+
+
+fetch("https://api.github.com/users/Elmira2505/repos")
+   .then((response) => {
+    return response.json();
+  })
+  .then((repositories) => {
+
+    console.log(repositories);
+
+    const projectSection = document.getElementById("projects");
+
+    const projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i++) {
+
+      const project = document.createElement("li");
+
+      project.innerText = repositories[i].name;
+
+      projectList.appendChild(project);
+    }
+
+  })
+  .catch((error) => {
+    console.error("Error fetching repositories:", error);
+  });

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../weather_app/css/main.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1>Weather App</h1>
+
+        <div class="buttons">
+          <button id="PortfolioBtn"><a href="../index.html">Portfolio</a></button>
+          <button id="unitBtn">°Switch to °F</button>
+          <button id="themeBtn">Toggle Theme</button>
+        </div>
+      </header>
+
+    <div class="container">
+      <div class="left">
+          <div id="cityList">
+            <ul></ul>
+          </div>
+      </div>
+
+      <div class="right">
+        <div class="search_cont">
+             <button id="addBtn" class="btn-disabled">+ Add</button>
+
+          <div class="search-container ">  
+            
+          <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Search city..."
+          autocomplete="off"
+        />
+        
+      <div id="suggestions"></div>
+      </div>
+</div>
+      
+    </div>
+
+        <div class="card" id="weatherCard">
+          <h2 id="city">City</h2>
+          <div id="temp">--°</div>
+          <div id="icon">🌤</div>
+          <div id="desc">Waiting for data...</div>
+          <div id="tempLH"></div>
+        </div>
+        <div id="descriptionWeather"></div>
+        <div id="hourlyForecast">
+           <div class="hourly_weather-wrapper">
+               <button class="hourly_arrow_left">&#10094;</button>
+               <div class="hourly_weather-slider"></div>
+              <button class="hourly_arrow_right">&#10095;</button>
+           </div>
+        </div>
+        <p>📅 14-day Forecast</p>
+        <div id="dailyForecast" class="dailyForecast">
+       
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+   
+
+    <script src="../weather_app/js/index.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+  </body>
+</html>

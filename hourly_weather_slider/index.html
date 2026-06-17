@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.weather-wrapper {
+    display: flex;
+    align-items: stretch;
+    height: 120px;
+    background: #282a35;
+    margin: 10px;
+}
+
+.weather-slider {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.hour {
+    flex-shrink: 0;
+    width: 100px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.time {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.temp {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.arrow {
+    width: 50px;
+    border: none;
+    background: #282a35;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+    <div class="weather-wrapper">
+    <button class="arrow left">&#10094;</button>
+
+    <div class="weather-slider">
+        
+        <div class="hour">
+            <div class="time">12:00</div>
+            <div class="icon">☀️</div>
+            <div class="temp">+18°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">15:00</div>
+            <div class="icon">🌧</div>
+            <div class="temp">+17°</div>
+        </div>
+        <div class="hour">
+            <div class="time">12:00</div>
+            <div class="icon">☀️</div>
+            <div class="temp">+18°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">13:00</div>
+            <div class="icon">🌤</div>
+            <div class="temp">+19°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">14:00</div>
+            <div class="icon">⛅</div>
+            <div class="temp">+20°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">15:00</div>
+            <div class="icon">🌧</div>
+            <div class="temp">+17°</div>
+        </div>
+        <div class="hour">
+            <div class="time">12:00</div>
+            <div class="icon">☀️</div>
+            <div class="temp">+18°</div>
+        </div>
+
+          <div class="hour">
+            <div class="time">12:00</div>
+            <div class="icon">☀️</div>
+            <div class="temp">+18°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">15:00</div>
+            <div class="icon">🌧</div>
+            <div class="temp">+17°</div>
+        </div>
+        <div class="hour">
+            <div class="time">12:00</div>
+            <div class="icon">☀️</div>
+            <div class="temp">+18°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">13:00</div>
+            <div class="icon">🌤</div>
+            <div class="temp">+19°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">14:00</div>
+            <div class="icon">⛅</div>
+            <div class="temp">+20°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">15:00</div>
+            <div class="icon">🌧</div>
+            <div class="temp">+17°</div>
+        </div>
+        <div class="hour">
+            <div class="time">12:00</div>
+            <div class="icon">☀️</div>
+            <div class="temp">+18°</div>
+        </div>
+          <div class="hour">
+            <div class="time">12:00</div>
+            <div class="icon">☀️</div>
+            <div class="temp">+18°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">15:00</div>
+            <div class="icon">🌧</div>
+            <div class="temp">+17°</div>
+        </div>
+        <div class="hour">
+            <div class="time">12:00</div>
+            <div class="icon">☀️</div>
+            <div class="temp">+18°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">13:00</div>
+            <div class="icon">🌤</div>
+            <div class="temp">+19°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">14:00</div>
+            <div class="icon">⛅</div>
+            <div class="temp">+20°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">15:00</div>
+            <div class="icon">🌧</div>
+            <div class="temp">+17°</div>
+        </div>
+        <div class="hour">
+            <div class="time">12:00</div>
+            <div class="icon">☀️</div>
+            <div class="temp">+18°</div>
+        </div>
+          <div class="hour">
+            <div class="time">12:00</div>
+            <div class="icon">☀️</div>
+            <div class="temp">+18°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">15:00</div>
+            <div class="icon">🌧</div>
+            <div class="temp">+17°</div>
+        </div>
+        <div class="hour">
+            <div class="time">12:00</div>
+            <div class="icon">☀️</div>
+            <div class="temp">+18°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">13:00</div>
+            <div class="icon">🌤</div>
+            <div class="temp">+19°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">14:00</div>
+            <div class="icon">⛅</div>
+            <div class="temp">+20°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">15:00</div>
+            <div class="icon">🌧</div>
+            <div class="temp">+17°</div>
+        </div>
+        <div class="hour">
+            <div class="time">12:00</div>
+            <div class="icon">☀️</div>
+            <div class="temp">+18°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">13:00</div>
+            <div class="icon">🌤</div>
+            <div class="temp">+19°</div>
+        </div>
+
+
+        <div class="hour">
+            <div class="time">14:00</div>
+            <div class="icon">⛅</div>
+            <div class="temp">+20°</div>
+        </div>
+
+        <div class="hour">
+            <div class="time">15:00</div>
+            <div class="icon">🌧</div>
+            <div class="temp">+17°</div>
+        </div>
+
+    </div>
+
+    <button class="arrow right">&#10095;</button>
+</div>
+ <script>
+    const slider = document.querySelector('.weather-slider');
+
+document.querySelector('.left').onclick = () => {
+    slider.scrollBy({ left: -120, behavior: 'smooth' });
+};
+
+document.querySelector('.right').onclick = () => {
+    slider.scrollBy({ left: 120, behavior: 'smooth' });
+};
+</script>   
+</body>
+</html>
