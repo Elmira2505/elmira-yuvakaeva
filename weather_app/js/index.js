@@ -55,8 +55,7 @@ if (currentWeatherData) {
 });
 
 addBtn.addEventListener('click', () => {
- console.log("city----", citiesList) 
-console.log("currentCity", currentCity)
+
   if (citiesList.some(city => city.name === currentCity.name) ) {
  alert("Duplicat city") 
 } else {
@@ -166,17 +165,16 @@ async function getWeather(lat, lon) {
     `&timezone=auto`;
 
   const res = await fetch(url);
-  //console.log(res.json())
-  return res.json();
+   return res.json();
 
 }
 
 /* 🎨 Render UI */
 function renderWeather(data, city) {
-  console.log(data,city)
+ 
   
   const tempC = data.current.temperature_2m;
-  console.log("tempC : ", tempC)
+ 
   const code = data.current.weather_code;
  // const city= data.timezone
   const card = document.getElementById('weatherCard');
@@ -198,7 +196,7 @@ function renderWeather(data, city) {
 }
 
 function getDescriptionWeather(data){
-  console.log(data)
+
    const description = document.getElementById("descriptionWeather");
    const current = data.current;
   const daily = data.daily;
@@ -298,11 +296,12 @@ function renderDailyForecast(daily) {
   month: "short",
   day: "numeric",
 });
-    console.log(date)
+   
 
     const icon = getIcon(daily.weather_code[i]);
-    const max = Math.round(daily.temperature_2m_max[i]);
-    const min = Math.round(daily.temperature_2m_min[i]);
+  
+    const maxTemp = isCelsius ? daily.temperature_2m_max[i] : toFahrenheit(daily.temperature_2m_max[i] )
+    const minTemp = isCelsius ? daily.temperature_2m_min[i]:  toFahrenheit(daily.temperature_2m_min[i]);
     const rain = daily.precipitation_probability_max[i];
 
 
@@ -311,7 +310,7 @@ function renderDailyForecast(daily) {
         
     <div class="day_card_item">${date}</div>
     <div class="day_card_item">${icon}</div>
-    <div class="day_card_item">Max: ${max}° / Min: ${min}°</div>
+    <div class="day_card_item">Max:  ${Math.round(maxTemp)}°${isCelsius ? "C" : "F"}/ Min:  ${Math.round(minTemp)}°${isCelsius ? "C" : "F"}</div>
     <divclass="day_card_item">🌧 ${rain}%</divclass=>
   </div>
 
@@ -338,7 +337,7 @@ async function getCity(lat, lon) {
 try {
   const res = await fetch(url);
   const data = await res.json();
-console.log(data)
+
    
                return data.address.city || data.address.town || data.address.village || data.address.county;
             
@@ -397,7 +396,7 @@ async function choiceCity() {
   data.results?.forEach((city) => {
     const div = document.createElement("div");
     div.className = "suggestion";
-    console.log('city data',city)
+
     //const contextCity = `${city.name},${city.admin1 ?? ""}, ${city.country}`;
     const contextCity = formatCity(city)
 
@@ -426,7 +425,7 @@ async function choiceCity() {
 
       renderWeather(weatherData, contextCity);
 
-      console.log(input.value);
+     
 
       
     };
