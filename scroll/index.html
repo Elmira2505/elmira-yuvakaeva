@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    background: #282a35;
+}
+.nav-wrapper > * {
+    height: 50px;
+}
+.navbar {
+    display: flex;
+    overflow-x: hidden;
+    white-space: nowrap;
+    flex: 1;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 16px 20px;
+}
+
+.arrow {
+    background: #282a35;
+    color: white;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.arrow:hover {
+    background: #3a3d4d;
+}
+    </style>
+</head>
+<body>
+    <div class="nav-wrapper">
+    <button class="arrow left">&#10094;</button>
+
+    <nav class="navbar">
+        
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+        <a href="#">Python</a>
+        <a href="#">React</a>
+        <a href="#">NodeJS</a>
+          <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+        <a href="#">Python</a>
+        <a href="#">React</a>
+        <a href="#">NodeJS</a>
+          <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+        <a href="#">Python</a>
+        <a href="#">React</a>
+        <a href="#">NodeJS</a>
+          <a href="#">JavaScript</a>
+        <a href="#">Python</a>
+        <a href="#">React</a>
+        <a href="#">NodeJS</a>
+          <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+        <a href="#">Python</a>
+        <a href="#">React</a>
+        <a href="#">NodeJS</a>
+          <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+        <a href="#">Python</a>
+        <a href="#">React</a>
+        <a href="#">NodeJS</a>
+    </nav>
+
+    <button class="arrow right">&#10095;</button>
+</div>
+<script>
+    const nav = document.querySelector('.navbar');
+
+document.querySelector('.left').onclick = () => {
+    nav.scrollBy({ left: -200, behavior: 'smooth' });
+};
+
+document.querySelector('.right').onclick = () => {
+    nav.scrollBy({ left: 200, behavior: 'smooth' });
+};
+</script>
+</body>
+</html>

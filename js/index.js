@@ -49,7 +49,6 @@ form.addEventListener('submit',(event)=>{
     const email= event.target.usersEmail.value
     const message = event.target.usersMessage.value
     messageSection.style.display = "block"
-    console.log(name, email, message)
     messageElement(name, email, message)
    event.target.reset()
 
